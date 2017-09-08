@@ -5,10 +5,11 @@
     "main": "index.js",
     "scripts": {
         "prestart": "node buildScripts/startMessage.js",
-        "start": "npm-run-all --parallel  security-check open:src",
+        "start": "npm-run-all --parallel security-check open:src",
         "open:src": "node buildScripts/srcServer.js",
         "security-check": "nsp check",
-        "share": "lt --port 8585",
+        "localtunnel": "lt --port 8585",
+        "share": "npm-run-all --parallel open:src localtunnel",
         "test": "node buildScripts/errorMessage.js && exit 1"
     },
     "repository": {
