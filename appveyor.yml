@@ -1,4 +1,4 @@
-# Test agains this version of Node.js
+# Test against this version of Node.js
 environment:
   matrix:
   # node.js
@@ -19,7 +19,7 @@ environment:
       #run tests
       - npm test
 
-      # Don't actuallu build.
+      # Don't actually build.
       build: off
 
 
